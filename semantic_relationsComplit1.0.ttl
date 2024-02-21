@@ -1,0 +1,865 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix compl-it: <http://klab/lexicon/vocabulary/compl-it#> .
+@prefix vartrans: <http://www.w3.org/ns/lemon/vartrans#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://klab/lexicon/vocabulary/compl-it#PolysemyAgentOfPersistentActivity-Profession
+compl-it:PolysemyAgentOfPersistentActivity-Profession rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf compl-it:polysemy ;
+                                                      rdfs:label "polysemy agent of persistent activity-profession"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#activity
+compl-it:activity rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:indirectTelic ;
+                  rdfs:label "activity"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#adjectiveAdjective
+compl-it:adjectiveAdjective rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf compl-it:derivational ;
+                            rdfs:label "adjective adjective"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#affectedBy
+compl-it:affectedBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf compl-it:agentive ;
+                    rdfs:label "affected by"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#affects
+compl-it:affects rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf compl-it:constitutive ;
+                 rdfs:label "affects"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#agentVerb
+compl-it:agentVerb rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf compl-it:derivational ;
+                   rdfs:label "agent verb"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#agentive
+compl-it:agentive rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf vartrans:senseRel ;
+                  rdfs:label "agentive"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#agentiveCause
+compl-it:agentiveCause rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf compl-it:agentive ;
+                       rdfs:label "agentive cause"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#agentiveExperience
+compl-it:agentiveExperience rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf compl-it:agentive ;
+                            rdfs:label "agentive experience"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#agentiveProg
+compl-it:agentiveProg rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf compl-it:agentive ;
+                      rdfs:label "agentive prog"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#antonym
+compl-it:antonym rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf compl-it:formal ;
+                 rdfs:label "antonym"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#antonymComp
+compl-it:antonymComp rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:antonym ;
+                     rdfs:label "complementary antonym"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#antonymGrad
+compl-it:antonymGrad rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:antonym ;
+                     rdfs:label "gradable antonym"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#antonymMult
+compl-it:antonymMult rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:antonym ;
+                     rdfs:label "multiple antonym"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#artifactualAgentive
+compl-it:artifactualAgentive rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf compl-it:agentive ;
+                             rdfs:label "artifactual agentive"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#beneficiaryVerb
+compl-it:beneficiaryVerb rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf compl-it:derivational ;
+                         rdfs:label "beneficiary verb"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#causedBy
+compl-it:causedBy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:agentive ;
+                  owl:inverseOf compl-it:causes ;
+                  rdfs:label "caused by"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#causes
+compl-it:causes rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf compl-it:property ;
+                rdfs:label "causes"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#concerns
+compl-it:concerns rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:property ;
+                  rdfs:label "concerns"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#constitutive
+compl-it:constitutive rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf vartrans:senseRel ;
+                      rdfs:label "constitutive"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#constitutiveActivity
+compl-it:constitutiveActivity rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf compl-it:property ;
+                              rdfs:label "constitutive activity"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#contains
+compl-it:contains rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:property ;
+                  rdfs:label "contains"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#createdby
+compl-it:createdby rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf compl-it:artifactualAgentive ;
+                   rdfs:label "created by"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#deadjectivalNoun
+compl-it:deadjectivalNoun rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf compl-it:derivational ;
+                          rdfs:label "deadjectival noun"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#deadjectivalVerbAdjective
+compl-it:deadjectivalVerbAdjective rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf compl-it:derivational ;
+                                   rdfs:label "deadjectival verb adjective"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#denominalAdjective
+compl-it:denominalAdjective rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf compl-it:derivational ;
+                            rdfs:label "denominal adjective"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#denominalVerbNoun
+compl-it:denominalVerbNoun rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf compl-it:derivational ;
+                           rdfs:label "denominal verb noun"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#derivational
+compl-it:derivational rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf vartrans:senseRel ;
+                      rdfs:label "derivational"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#derivedFrom
+compl-it:derivedFrom rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:artifactualAgentive ;
+                     rdfs:label "derived From"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#deverbalAdjective
+compl-it:deverbalAdjective rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf compl-it:derivational ;
+                           rdfs:label "deverbal adjective"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#deverbalNounVerb
+compl-it:deverbalNounVerb rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf compl-it:derivational ;
+                          rdfs:label "deverbal noun verb"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#directTelic
+compl-it:directTelic rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:telic ;
+                     rdfs:label "direct telic"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#eventVerb
+compl-it:eventVerb rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf compl-it:derivational ;
+                   rdfs:label "event verb"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#feeling
+compl-it:feeling rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf compl-it:constitutive ;
+                 rdfs:label "feeling"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#formal
+compl-it:formal rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf vartrans:senseRel ;
+                rdfs:label "formal"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#hasAsColour
+compl-it:hasAsColour rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:property ;
+                     rdfs:label "has as colour"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#hasAsEffect
+compl-it:hasAsEffect rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:property ;
+                     rdfs:label "has as effect"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#hasAsMember
+compl-it:hasAsMember rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:constitutive ;
+                     owl:inverseOf compl-it:isAFollowerOf ,
+                                   compl-it:isAMemberOf ;
+                     rdfs:label "has as member"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#hasAsPart
+compl-it:hasAsPart rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf compl-it:constitutive ;
+                   owl:inverseOf compl-it:isAPartOf ;
+                   rdfs:label "has as part"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#hasAsProperty
+compl-it:hasAsProperty rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf compl-it:property ;
+                       rdfs:label "has as property"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#indirectTelic
+compl-it:indirectTelic rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf compl-it:telic ;
+                       rdfs:label "indirect telic"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#instrument
+compl-it:instrument rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf compl-it:constitutive ;
+                    rdfs:label "instrument"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#instrumentVerb
+compl-it:instrumentVerb rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf compl-it:derivational ;
+                        rdfs:label "instrument verb"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#instrumental
+compl-it:instrumental rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf compl-it:indirectTelic ;
+                      rdfs:label "instrumental"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#isA
+compl-it:isA rdf:type owl:ObjectProperty ;
+             owl:equivalentProperty lexinfo:hyponym ;
+             rdfs:subPropertyOf compl-it:formal ;
+             owl:inverseOf lexinfo:hypernym ;
+             rdfs:label "isA"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#isAFollowerOf
+compl-it:isAFollowerOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf compl-it:isAMemberOf ;
+                       rdfs:label "is a follower of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#isAMemberOf
+compl-it:isAMemberOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:constitutive ;
+                     rdfs:label "is a member of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#isAPartOf
+compl-it:isAPartOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf compl-it:constitutive ;
+                   rdfs:label "is a part of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#isIn
+compl-it:isIn rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf compl-it:location ;
+              rdfs:label "is in"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#isRegulatedBy
+compl-it:isRegulatedBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf compl-it:constitutive ;
+                       rdfs:label "is regulated by"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#isTheAbilityOf
+compl-it:isTheAbilityOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf compl-it:activity ;
+                        rdfs:label "is the ability of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#isTheActivityOf
+compl-it:isTheActivityOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf compl-it:activity ;
+                         rdfs:label "is the activity of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#isTheHabitOf
+compl-it:isTheHabitOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf compl-it:activity ;
+                      rdfs:label "is the habit of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#kinship
+compl-it:kinship rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf compl-it:constitutive ;
+                 rdfs:label "kinship"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#livesIn
+compl-it:livesIn rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf compl-it:location ;
+                 rdfs:label "lives in"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#location
+compl-it:location rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:constitutive ;
+                  rdfs:label "location"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#madeOf
+compl-it:madeOf rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf compl-it:isAPartOf ;
+                rdfs:label "made of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#measuredBy
+compl-it:measuredBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf compl-it:property ;
+                    rdfs:label "measured by"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#measures
+compl-it:measures rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:property ;
+                  rdfs:label "measures"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#metaphor
+compl-it:metaphor rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf vartrans:senseRel ;
+                  rdfs:label "metaphor"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#metonym
+compl-it:metonym rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf vartrans:senseRel ;
+                 rdfs:label "metonym"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#nominalization
+compl-it:nominalization rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf compl-it:derivational ;
+                        rdfs:label "nominalization"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#nounNoun
+compl-it:nounNoun rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:derivational ;
+                  rdfs:label "noun noun"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#nounProperNoun
+compl-it:nounProperNoun rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf compl-it:derivational ;
+                        rdfs:label "noun proper noun"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#objectOfTheActivity
+compl-it:objectOfTheActivity rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf compl-it:directTelic ;
+                             rdfs:label "object of the activity"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#patientVerb
+compl-it:patientVerb rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:derivational ;
+                     rdfs:label "patient verb"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemy
+compl-it:polysemy rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf vartrans:senseRel ;
+                  rdfs:label "polysemy"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyAnimalFood
+compl-it:polysemyAnimalFood rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf compl-it:polysemy ;
+                            rdfs:label "polysemy animal-food"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyAnimalMaterial
+compl-it:polysemyAnimalMaterial rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf compl-it:polysemy ;
+                                rdfs:label "polysemy animal-material"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyAreaHumanGroup
+compl-it:polysemyAreaHumanGroup rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf compl-it:polysemy ;
+                                rdfs:label "polysemy area-human group"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyArtifactualMaterialArtwork
+compl-it:polysemyArtifactualMaterialArtwork rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf compl-it:polysemy ;
+                                            rdfs:label "polysemy artifactual material-artwork"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyAspectualCauseAspectual
+compl-it:polysemyAspectualCauseAspectual rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf compl-it:polysemy ;
+                                         rdfs:label "polysemy aspectual-cause aspectual"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyBuildingInstitution
+compl-it:polysemyBuildingInstitution rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf compl-it:polysemy ;
+                                     rdfs:label "polysemy building-institution"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyCauseActNonRelationalAct
+compl-it:polysemyCauseActNonRelationalAct rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf compl-it:polysemy ;
+                                          rdfs:label "polysemy cause act-non relational act"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyCauseChangeChange
+compl-it:polysemyCauseChangeChange rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf compl-it:polysemy ;
+                                   rdfs:label "polysemy cause change-change"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyChangeLocationCauseChangeLocation
+compl-it:polysemyChangeLocationCauseChangeLocation rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf compl-it:polysemy ;
+                                                   rdfs:label "polysemy change location-cause change location"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyChangeOfStateCauseChangeOfState
+compl-it:polysemyChangeOfStateCauseChangeOfState rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf compl-it:polysemy ;
+                                                 rdfs:label "polysemy change of state-cause change of state"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyChangeOfValueCauseChangeOfValue
+compl-it:polysemyChangeOfValueCauseChangeOfValue rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf compl-it:polysemy ;
+                                                 rdfs:label "polysemy change of value-cause change of value"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyCognitiveEventExperienceEvent
+compl-it:polysemyCognitiveEventExperienceEvent rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf compl-it:polysemy ;
+                                               rdfs:label "polysemy cognitive event-experience event"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyConstitutiveChangeCauseConstitutiveChange
+compl-it:polysemyConstitutiveChangeCauseConstitutiveChange rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf compl-it:polysemy ;
+                                                           rdfs:label "polysemy constitutive change-cause constitutive change"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyContainerAmount
+compl-it:polysemyContainerAmount rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf compl-it:polysemy ;
+                                 rdfs:label "polysemy container-amount"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyContainerQuantity
+compl-it:polysemyContainerQuantity rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf compl-it:polysemy ;
+                                   rdfs:label "polysemy container-quantity"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyConventionSemioticArtifact
+compl-it:polysemyConventionSemioticArtifact rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf compl-it:polysemy ;
+                                            rdfs:label "polysemy convention-semiotic artifact"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyDomainActivity
+compl-it:polysemyDomainActivity rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf compl-it:polysemy ;
+                                rdfs:label "polysemy domain-activity"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyExperienceEventCauseExperienceEvent
+compl-it:polysemyExperienceEventCauseExperienceEvent rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf compl-it:polysemy ;
+                                                     rdfs:label "polysemy experience event-cause experience event"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyHumanGroupBuilding
+compl-it:polysemyHumanGroupBuilding rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf compl-it:polysemy ;
+                                    rdfs:label "polysemy human group-building"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyHumanGroupGeopoliticalLocation
+compl-it:polysemyHumanGroupGeopoliticalLocation rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf compl-it:polysemy ;
+                                                rdfs:label "polysemy human group-geopolitical location"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyHumanGroupInstitution
+compl-it:polysemyHumanGroupInstitution rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf compl-it:polysemy ;
+                                       rdfs:label "polysemy human group-institution"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyInstitutionHumanGroup
+compl-it:polysemyInstitutionHumanGroup rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf compl-it:polysemy ;
+                                       rdfs:label "polysemy institution-human group"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyLocationHumanGroup
+compl-it:polysemyLocationHumanGroup rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf compl-it:polysemy ;
+                                    rdfs:label "polysemy location-human group"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyMoveCauseMotion
+compl-it:polysemyMoveCauseMotion rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf compl-it:polysemy ;
+                                 rdfs:label "polysemy move-cause motion"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyMoveChangeOfLocation
+compl-it:polysemyMoveChangeOfLocation rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf compl-it:polysemy ;
+                                      rdfs:label "polysemy move-change of location"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyNationalityStyle
+compl-it:polysemyNationalityStyle rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf compl-it:polysemy ;
+                                  rdfs:label "polysemy nationality-style"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyNaturalSubstanceArtwork
+compl-it:polysemyNaturalSubstanceArtwork rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf compl-it:polysemy ;
+                                         rdfs:label "polysemy natural substance-artwork"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyOpeningArtifact
+compl-it:polysemyOpeningArtifact rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf compl-it:polysemy ;
+                                 rdfs:label "polysemy opening-artifact"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyPeopleLanguage
+compl-it:polysemyPeopleLanguage rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf compl-it:polysemy ;
+                                rdfs:label "polysemy people-language"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyPhysicalCreationArtifact
+compl-it:polysemyPhysicalCreationArtifact rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf compl-it:polysemy ;
+                                          rdfs:label "polysemy physical creation-artifact"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyPlantArtifactualDrink
+compl-it:polysemyPlantArtifactualDrink rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf compl-it:polysemy ;
+                                       rdfs:label "polysemy plant-artifactual drink"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyPlantFlavouring
+compl-it:polysemyPlantFlavouring rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf compl-it:polysemy ;
+                                 rdfs:label "polysemy plant-flavouring"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyPlantFlower
+compl-it:polysemyPlantFlower rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf compl-it:polysemy ;
+                             rdfs:label "polysemy plant-flower"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyPlantFruit
+compl-it:polysemyPlantFruit rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf compl-it:polysemy ;
+                            rdfs:label "polysemy plant-fruit"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyPlantSubstance
+compl-it:polysemyPlantSubstance rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf compl-it:polysemy ;
+                                rdfs:label "polysemy plant-substance"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyPlantVegetable
+compl-it:polysemyPlantVegetable rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf compl-it:polysemy ;
+                                rdfs:label "polysemy plant-vegetable"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyPurposeActDomain
+compl-it:polysemyPurposeActDomain rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf compl-it:polysemy ;
+                                  rdfs:label "polysemy purpose act-domain"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyRelationalChangeCauseRelationalChange
+compl-it:polysemyRelationalChangeCauseRelationalChange rdf:type owl:ObjectProperty ;
+                                                       rdfs:subPropertyOf compl-it:polysemy ;
+                                                       rdfs:label "polysemy relational change-cause relational change"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemySemioticArtifactInformation
+compl-it:polysemySemioticArtifactInformation rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf compl-it:polysemy ;
+                                             rdfs:label "polysemy semiotic artifact-information"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemySoundActivityCauseSoundActivity
+compl-it:polysemySoundActivityCauseSoundActivity rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf compl-it:polysemy ;
+                                                 rdfs:label "polysemy sound activity-cause sound activity"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyStativeLocationChangeOfLocation
+compl-it:polysemyStativeLocationChangeOfLocation rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf compl-it:polysemy ;
+                                                 rdfs:label "polysemy stative location-change of location"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemySubstanceColour
+compl-it:polysemySubstanceColour rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf compl-it:polysemy ;
+                                 rdfs:label "polysemy substance-colour"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyTemperatureBehaviour
+compl-it:polysemyTemperatureBehaviour rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf compl-it:polysemy ;
+                                      rdfs:label "polysemy temperature-behaviour"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#polysemyVegetalEntityColour
+compl-it:polysemyVegetalEntityColour rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf compl-it:polysemy ;
+                                     rdfs:label "polysemy vegetal entity-colour"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#precedes
+compl-it:precedes rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:constitutive ;
+                  rdfs:label "precedes"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#processVerb
+compl-it:processVerb rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:derivational ;
+                     rdfs:label "process verb"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#producedBy
+compl-it:producedBy rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf compl-it:property ;
+                    owl:inverseOf compl-it:produces ;
+                    rdfs:label "produced by"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#produces
+compl-it:produces rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:property ;
+                  rdfs:label "produces"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#property
+compl-it:property rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:constitutive ;
+                  rdfs:label "property"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#propertyOf
+compl-it:propertyOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf compl-it:property ;
+                    rdfs:label "property of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#purpose
+compl-it:purpose rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf compl-it:telic ;
+                 rdfs:label "purpose"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#quantifies
+compl-it:quantifies rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf compl-it:property ;
+                    rdfs:label "quantifies"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#regulates
+compl-it:regulates rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf compl-it:constitutive ;
+                   rdfs:label "regulates"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#relatedTo
+compl-it:relatedTo rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf compl-it:property ;
+                   rdfs:label "related to"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#relates
+compl-it:relates rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf compl-it:constitutive ;
+                 rdfs:label "relates"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#resultOf
+compl-it:resultOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf compl-it:agentive ;
+                  rdfs:label "result of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#resultingFrom
+compl-it:resultingFrom rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf compl-it:agentive ;
+                       rdfs:label "resulting from"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#resultingState
+compl-it:resultingState rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf compl-it:constitutive ;
+                        rdfs:label "resulting state"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#source
+compl-it:source rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf compl-it:agentive ;
+                rdfs:label "source"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#stateverb
+compl-it:stateverb rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf compl-it:derivational ;
+                   rdfs:label "state verb"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#successorOf
+compl-it:successorOf rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:property ;
+                     rdfs:label "successor of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#synonym
+compl-it:synonym rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf vartrans:senseRel ;
+                 rdfs:label "synonym"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#telic
+compl-it:telic rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf vartrans:senseRel ;
+               rdfs:label "telic"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#typicalLocation
+compl-it:typicalLocation rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf compl-it:constitutive ;
+                         rdfs:label "typical location"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#typicalOf
+compl-it:typicalOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf compl-it:property ;
+                   rdfs:label "typical of"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#usedAgainst
+compl-it:usedAgainst rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf compl-it:instrumental ;
+                     rdfs:label "used against"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#usedAs
+compl-it:usedAs rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf compl-it:instrumental ;
+                rdfs:label "used as"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#usedBy
+compl-it:usedBy rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf compl-it:instrumental ;
+                rdfs:label "used by"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#usedFor
+compl-it:usedFor rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf compl-it:instrumental ;
+                 rdfs:label "used for"@en .
+
+
+###  http://klab/lexicon/vocabulary/compl-it#uses
+compl-it:uses rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf compl-it:constitutive ;
+              rdfs:label "uses"@en .
+
+
+###  http://www.lexinfo.net/ontology/3.0/lexinfohypernym
+lexinfo:hypernym rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf compl-it:formal ;
+                 owl:inverseOf lexinfo:hyponym ;
+                 rdfs:label "hypernym"@en .
+
+
+###  http://www.lexinfo.net/ontology/3.0/lexinfohyponym
+lexinfo:hyponym rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf compl-it:formal ;
+                rdfs:label "hyponym"@en .
+
+
+###  http://www.w3.org/ns/lemon/vartrans#senseRel
+vartrans:senseRel rdf:type owl:ObjectProperty .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
